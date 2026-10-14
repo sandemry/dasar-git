@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Sande Koy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header dan navigasi -->
+    <header class="header">
+        <a href="#beranda" class="logo">Sande Koy</a>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#proyek">Proyek</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <button id="tombolTema" type="button">Ganti Tema</button>
+    </header>
+
+    <main class="container">
+
+        <!-- Hero dan foto profil -->
+        <section id="beranda" class="hero kartu">
+            <div class="foto-profil">
+                <img src="img/foto.jpg" alt="Foto profil Sande Koy">
+            </div>
+
+            <h1>Halo, saya Sande Koy!</h1>
+            <p>Mahasiswa Teknik Elektro yang tertarik pada teknologi,
+                pemrograman, dan pengembangan ide kreatif.</p>
+
+            <a href="#proyek" class="tombol">Lihat Proyek</a>
+        </section>
+
+        <!-- Tentang saya -->
+        <section id="tentang" class="tentang kartu">
+            <h2>Tentang Saya</h2>
+            <p>
+                Saya adalah mahasiswa yang senang mempelajari hal baru,
+                terutama di bidang teknologi dan pemrograman.
+                Saya ingin terus mengembangkan kemampuan melalui
+                proyek dan pengalaman.
+            </p>
+
+            <div class="aksi-tentang">
+                <a href="img/CV-Sande.pdf" class="tombol" download>
+                    Unduh CV
+                </a>
+                <a href="#kontak" class="tombol tombol-sekunder">
+                    Hubungi Saya
+                </a>
+            </div>
+        </section>
+
+        <!-- Daftar proyek -->
+        <section id="proyek" class="proyek kartu">
+            <h2>Proyek Pilihan</h2>
+
+            <div class="daftar-proyek">
+                <article class="kartu-proyek">
+                    <img src="img/proyek-1.jpg" alt="Proyek inventaris kafe">
+                    <h3>Sistem Inventaris Kafe</h3>
+                    <p>Aplikasi Java untuk mengelola stok bahan baku
+                        dan pencatatan penggunaan bahan.</p>
+                </article>
+
+                <article class="kartu-proyek">
+                    <img src="img/proyek-2.jpg" alt="Proyek website portofolio">
+                    <h3>Website Portofolio</h3>
+                    <p>Website pribadi menggunakan HTML, CSS,
+                        dan JavaScript.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Keahlian -->
+        <section id="keahlian" class="keahlian kartu">
+            <h2>Keahlian</h2>
+            <ul>
+                <li>HTML dan CSS dasar</li>
+                <li>Java dasar dan OOP</li>
+                <li>Pengolahan data</li>
+                <li>Kerja sama tim</li>
+            </ul>
+        </section>
+
+        <!-- Media sosial -->
+        <section class="sosial kartu">
+            <h2>Media Sosial</h2>
+            <p>Temukan saya melalui:</p>
+            <div class="daftar-sosial">
+                <a href="https://www.instagram.com/" target="_blank"
+                   rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.linkedin.com/" target="_blank"
+                   rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/" target="_blank"
+                   rel="noopener noreferrer">GitHub</a>
+            </div>
+        </section>
+
+        <!-- Formulir kontak -->
+        <section id="kontak" class="kontak kartu">
+            <h2>Kontak Saya</h2>
+            <p>Silakan kirim pesan melalui formulir berikut.</p>
+
+            <form id="formKontak" class="form-kontak">
+                <div class="kolom-input">
+                    <input type="text" id="nama" name="nama"
+                           placeholder="Nama lengkap" required>
+
+                    <input type="email" id="email" name="email"
+                           placeholder="Alamat email" required>
+                </div>
+
+                <textarea id="pesan" name="pesan" rows="4"
+                          placeholder="Tulis pesan kamu..."
+                          required></textarea>
+
+                <button type="submit" class="tombol">Kirim Pesan</button>
+            </form>
+
+            <p id="pesanStatus" role="status" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Sande Koy | Portofolio Personal</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

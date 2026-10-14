@@ -1,0 +1,330 @@
+
+/* Pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --latar: #f1f4f9;
+    --kartu: #ffffff;
+    --teks: #253047;
+    --aksen: #647da5;
+    --garis: #d6dce6;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--latar);
+    color: var(--teks);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 6%;
+    background-color: var(--kartu);
+    border-bottom: 1px solid var(--garis);
+}
+
+.logo {
+    color: var(--teks);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--teks);
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--aksen);
+}
+
+/* Tombol */
+button,
+.tombol {
+    display: inline-block;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 16px;
+    background-color: var(--aksen);
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover,
+.tombol:hover {
+    opacity: 0.85;
+}
+
+.tombol-sekunder {
+    background-color: transparent;
+    border: 1px solid var(--aksen);
+    color: var(--teks);
+}
+
+/* Layout utama */
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 24px auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.kartu {
+    min-width: 0;
+    padding: 22px;
+    background-color: var(--kartu);
+    border: 1px solid var(--garis);
+    border-radius: 12px;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 21px;
+}
+
+p {
+    margin-bottom: 14px;
+}
+
+/* Hero */
+.hero {
+    grid-column: span 1;
+    grid-row: span 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-profil {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--latar);
+    border: 3px solid var(--garis);
+}
+
+.foto-profil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tentang saya */
+.tentang {
+    grid-column: span 2;
+}
+
+.aksi-tentang {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Proyek */
+.proyek {
+    grid-column: span 2;
+}
+
+.daftar-proyek {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.kartu-proyek {
+    padding: 12px;
+    border: 1px solid var(--garis);
+    border-radius: 8px;
+}
+
+.kartu-proyek img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.kartu-proyek h3 {
+    font-size: 16px;
+}
+
+/* Keahlian dan sosial */
+.keahlian,
+.sosial {
+    grid-column: span 1;
+}
+
+.keahlian ul {
+    padding-left: 20px;
+}
+
+.daftar-sosial {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.daftar-sosial a {
+    color: var(--teks);
+    border: 1px solid var(--garis);
+    border-radius: 6px;
+    padding: 7px 10px;
+    text-decoration: none;
+}
+
+.daftar-sosial a:hover {
+    background-color: var(--latar);
+}
+
+/* Kontak */
+.kontak {
+    grid-column: 1 / -1;
+}
+
+.form-kontak {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 12px;
+    align-items: start;
+}
+
+.kolom-input {
+    display: grid;
+    gap: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--garis);
+    border-radius: 6px;
+    background-color: var(--kartu);
+    color: var(--teks);
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#pesanStatus {
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+/* Footer */
+.footer {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--kartu);
+    border-top: 1px solid var(--garis);
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Tema gelap */
+body.tema-gelap {
+    --latar: #182131;
+    --kartu: #253047;
+    --teks: #f1f4f9;
+    --aksen: #708fbd;
+    --garis: #46536a;
+}
+
+/* Tampilan tablet */
+@media (max-width: 800px) {
+    .container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .tentang,
+    .proyek {
+        grid-column: span 1;
+    }
+
+    .form-kontak {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-kontak button {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Tampilan ponsel */
+@media (max-width: 550px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero,
+    .tentang,
+    .proyek,
+    .keahlian,
+    .sosial,
+    .kontak {
+        grid-column: 1 / -1;
+    }
+
+    .daftar-proyek {
+        grid-template-columns: 1fr;
+    }
+
+    .form-kontak {
+        grid-template-columns: 1fr;
+    }
+
+    .form-kontak button {
+        grid-column: auto;
+    }
+}
